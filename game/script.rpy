@@ -55,12 +55,16 @@ label talk:
     c "..."
 
     hide nil
+    hide espresso
     show nil looking down
+    show espresso
 
     c "oh"
 
     hide nil looking down
+    hide espresso
     show nil
+    show espresso
 
     c "thanks, it's dear to me"
 
@@ -87,14 +91,18 @@ label talk:
     l "oh, Nil.."
 
     hide nil
+    hide espresso
     show nil looking down
+    show espresso
 
     n "yup"
 
     n "what is your name?"
 
     hide nil looking down
+    hide espresso
     show nil
+    show espresso
 
     l "I'm.."
 
@@ -103,14 +111,18 @@ label talk:
     l "..Lin"
 
     hide nil
+    hide espresso
     show nil happy
+    show espresso
 
     n "Nice to meet you Lin"
 
     l "Nice to meet you too, Nil"
 
     hide nil happy
+    hide espresso
     show nil
+    show espresso
 
     n "..."
 
@@ -135,6 +147,7 @@ label talk:
     n "..."
 
     hide nil
+    hide espresso
     show nil looking down
 
     n "well..."
