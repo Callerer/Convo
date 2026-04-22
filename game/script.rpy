@@ -1,33 +1,181 @@
-﻿# The script of the game goes in this file.
+﻿define l = Character("Lin")
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+define n = Character("Nil")
+
+define c = Character("Customer")
 
 define e = Character("Eileen")
 
-
-# The game starts here.
+$linSign = ""
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    "what a beautiful day..."
 
-    scene bg room
+    show nil
+    with fade
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    c "Hello, I'd like an espresso"
 
-    show eileen happy
+    l "Ok, sir.."
 
-    # These display lines of dialogue.
+    "....isn't he..."
 
-    e "You've created a new Ren'Py game."
+    with fade
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    l "..."
 
-    # This ends the game.
+    l "here's your Espresso, sir..."
 
+    show espresso
+
+    c "Thank you!"
+
+    menu:
+        "that is a unique pendant":
+            jump talk
+        "that'll be 30 keas":
+            jump noTalk
+
+    
+label noTalk:
+    c "okay, here"
+
+    l "Thank you, have a nice day..."
+
+    hide nil
+    show nil happy
+
+    c "you too!"
+
+    hide nil
     return
+
+label talk:
+    c "..."
+
+    hide nil
+    show nil looking down
+
+    c "oh"
+
+    hide nil looking down
+    show nil
+
+    c "thanks, it's dear to me"
+
+    l "Oh, i see..."
+
+    c "..."
+
+    c "this is break time, right?"
+
+    l "yes, sir"
+
+    c "okay..."
+
+    # nil sits down
+
+    l "..."
+
+    l "what is your name sir?"
+
+    c "oh, it's Nil"
+
+    l "oh"
+
+    l "oh, Nil.."
+
+    hide nil
+    show nil looking down
+
+    n "yup"
+
+    n "what is your name?"
+
+    hide nil looking down
+    show nil
+
+    l "I'm.."
+
+    l "..."
+
+    l "..Lin"
+
+    hide nil
+    show nil happy
+
+    n "Nice to meet you Lin"
+
+    l "Nice to meet you too, Nil"
+
+    hide nil happy
+    show nil
+
+    n "..."
+
+    n "say.."
+
+    n "..what would you choose as a sign of you?"
+
+    n "Moon or a star?"
+
+    $linSign = renpy.input(default = "Moon" , prompt = "What would you choose as your sign?")
+
+    n "%(linSign)s , nice.."
+
+    n "..."
+
+    n "you know..."
+
+    n "...this pendant"
+
+    n "your choice of sign matters..."
+
+    n "..."
+
+    hide nil
+    show nil looking down
+
+    n "well..."
+
+    e "....lin..."
+
+    e "...Lin.."
+
+    e "Lin!"
+
+    l "..oh?.."
+
+    hide nil looking down
+    show eiln
+    with fade
+
+    e "what are you doing?"
+
+    l "Sorry, i was just talking to..Nil.."
+
+    hide eiln
+    with fade
+
+    "..."
+
+    play music "./music/theme-song.mp3" fadein 1.0 loop
+
+    l "..."
+
+    l "....."
+
+    l ".."
+
+    e "Huh? anyways, i need your help with the new machine"
+
+    l "..."
+
+    l "..sure.."
+
+
+
+
+    
+
